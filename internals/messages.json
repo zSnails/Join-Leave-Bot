@@ -1,3 +1,6 @@
 {
-  
+  "note": "you can make your own messages here!",
+  "join_1": "A new user has joined the server, ",
+  "join_2": ", everyone, please say hi!",
+  "leave_1": " left the server! They will be missed!"
 }
