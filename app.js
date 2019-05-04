@@ -1,12 +1,11 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const clientConfig = require('./internals/tokenfile.json');
-const config = require('./config.json');
-const package = require('./package.json')
-const messages = require('./internals/messages.json')
-const lmao = require('./internals/channel.json')
+const package = require('./package.json');
+const messages = require('./internals/messages.json');
+const lmao = require('./internals/channel.json');
 client.on('ready', () => {
-  console.log('#---------------------------------------------------------------------------------------------------------#')
+  console.log('#-----------------------------------------------------------------------------------------------------------------#')
   console.log('     ___  _______  ___  __    _          ___      _______  _______  __   __  _______     _______  _______  _______ ')
   console.log('    |   ||       ||   ||  |  | |        |   |    |       ||   _   ||  | |  ||       |   |  _    ||       ||       |')
   console.log('    |   ||   _   ||   ||   |_| |        |   |    |    ___||  |_|  ||  |_|  ||    ___|   | |_|   ||   _   ||_     _|')
@@ -16,22 +15,7 @@ client.on('ready', () => {
   console.log('|_______||_______||___||_|  |__|        |_______||_______||__| |__|  |___|  |_______|   |_______||_______|  |___|  ')
   console.log('By: zSnails#5755')
   console.log(`Version: ${package.version}`)
-  console.log('#---------------------------------------------------------------------------------------------------------#')
-});
-
-
-client.on('message', message => {
-  if (message.content.indexOf(config.prefix) !== 0) return;
-  if (message.channel.type == 'dm') return;
-  const args = message.content.slice(config.prefix.length).trim().split(/ +/g);
-  const command = args.shift().toLowerCase();
-  console.log(`[INFO]: ${message.author.tag} executed ${command}`);
-  try {
-    let commandFile = require(`./commands/${command}.js`);
-    commandFile.run(client, message, args, Discord, config);
-  } catch (err) {
-    console.log(err.message)
-  }
+  console.log('#-----------------------------------------------------------------------------------------------------------------#')
 });
 
 client.on('guildMemberAdd', usr => {
