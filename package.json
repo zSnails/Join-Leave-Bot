@@ -1,6 +1,6 @@
 {
   "name": "yes",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "This bot sends join and leave messages to a certain channel.",
   "main": "app.js",
   "scripts": {
