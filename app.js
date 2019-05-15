@@ -19,13 +19,14 @@ client.on('ready', () => {
   console.log('#-----------------------------------------------------------------------------------------------------------------#')
 });
 
+
 client.on('guildMemberAdd', usr => {
   let msgchannel_2 = usr.guild.channels.find(channel => channel.id === lmao.channel_id)
-  msgchannel_2.send(messages.join_1 + usr.user.tag + messages.join_2)
+  msgchannel_2.send(messages['joins'].classic.replace('{{member}}', usr.user.tag))
 });
 client.on('guildMemberRemove', usr => {
   let msgchannel_2 = usr.guild.channels.find(channel => channel.id === lmao.channel_id)
-  msgchannel_2.send(usr.user.tag + messages.leave_1)
+  msgchannel_2.send(messages['leaves'].classic.replace('{{member}}', usr.user.tag))
 });
 
 client.login(clientConfig.token)
