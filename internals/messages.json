@@ -7,9 +7,7 @@
     "classic": "{{member}} left the server",
     "classy": "Looks like {{member}} just left the server, they'll be missed"
   },
-  {
-    "__comments__": {
+  "__comments__": {
       "1": "ok so, as you can see, {{member}} reffers to the member use it like this: Hey {{member}} welcome ot the server"
     }
-  }
 }
